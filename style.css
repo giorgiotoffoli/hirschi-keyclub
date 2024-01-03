@@ -64,10 +64,17 @@ video {
 }
 
 .hero-text h2 {
-  font-size: 2rem;
+  text-wrap: nowrap;
+  font-size: 1.5em;
   padding-left: 5px;
   font-weight: 500;
   animation: backwards fadeIn 2s 2s;
+}
+
+@media screen and (max-width: 620px) {
+  .hero-text h2 {
+    font-size: 1em;
+  }
 }
 
 @keyframes fadeIn {
@@ -217,7 +224,7 @@ video {
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.7)
     ),
-    url(imgs/hours.jpg) no-repeat center center fixed;
+    url(imgs/hours.jpg);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -279,9 +286,13 @@ video {
 
 /* Section 4 */
 .section-4 {
-  height: 100vh;
+  height: auto;
   width: 100%;
   background: white;
+  background-image: url(llline.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .section-4 h1 {
@@ -305,13 +316,92 @@ video {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Cards */
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+  margin: auto;
+  padding: 100px 0 100px 0;
+}
+
+.container .card {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .card:nth-child(2) {
+  width: 220px;
+  height: 375px;
+}
+
+.container .card:nth-child(3) {
+  width: 200px;
+  height: 350px;
+}
+
+.container .card .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .card:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .container .card .content {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.container .card .content h2 {
+  position: absolute;
+  top: -200px;
+  right: -50px;
+  font-size: 8em;
+  color: rgba(0, 0, 0, 0.563);
+  pointer-events: none;
+  font-family: "Playfair Display", serif;
+}
+
+.container .card .content h3 {
+  font-size: 1em;
+  color: black;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Footer */
+
 footer {
   height: auto;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 500;
-  background: white;
-  backdrop-filter: blur(5px);
+  background: rgb(255, 255, 255);
 }
 
 footer p {

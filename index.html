@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--   IF YOU SEE THIS THEN IT IS UP TO DATE -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Google Fonts -->
-    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,6 +52,7 @@
     </div>
 
     <!-- Hours -->
+
     <div class="section-3" id="hours">
       <div class="custom-shape-divider-top-1703873730">
         <svg
@@ -109,13 +108,43 @@
       </div>
     </div>
 
+    <!-- Section 4 - Ranking -->
+
     <div class="section-4">
-      <h1>The Rankings</h1>
-      <p>Coming soon...</p>
+      <h1>The Ranking</h1>
+
+      <div class="container">
+        <div class="card">
+          <div class="content">
+            <h2>1</h2>
+            <h3>Daniel</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>2</h2>
+            <h3>Gio</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>3</h2>
+            <h3>Nico</h3>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
       <p>Have questions? <a href="mailto:knolan@wfisd.net">Contact Us</a></p>
     </footer>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
   </body>
 </html>
 
