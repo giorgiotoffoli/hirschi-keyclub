@@ -10,6 +10,10 @@
   text-shadow: none;
 }
 
+body {
+  background: black;
+}
+
 .hero {
   overflow: hidden;
   position: relative;
@@ -144,7 +148,7 @@ video {
 
 .photos img:nth-child(1) {
   margin-left: 70%;
-  bottom: -160px;
+  bottom: -17.5vh;
 }
 
 .photos img:nth-child(2) {
@@ -162,6 +166,16 @@ video {
     bottom: 300px;
     margin-left: 75%;
     width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .photos img {
+    display: none;
+  }
+
+  .section-2 p {
+    width: auto;
   }
 }
 
@@ -203,8 +217,11 @@ video {
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.7)
     ),
-    url(imgs/hours.jpg);
+    url(imgs/hours.jpg) no-repeat center center fixed;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -264,6 +281,7 @@ video {
 .section-4 {
   height: 100vh;
   width: 100%;
+  background: white;
 }
 
 .section-4 h1 {
@@ -292,7 +310,7 @@ footer {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 500;
-
+  background: white;
   backdrop-filter: blur(5px);
 }
 
