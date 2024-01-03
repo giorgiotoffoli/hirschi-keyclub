@@ -242,14 +242,8 @@ video {
         rgba(0, 0, 0, 0),
         rgba(0, 0, 0, 0.7)
       ),
-      url(imgs/hours.jpg);
+      url(imgs/hours.jpg) cover no-repeat;
     background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
   }
 }
 
