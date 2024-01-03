@@ -243,7 +243,6 @@ video {
         rgba(0, 0, 0, 0.7)
       ),
       url(imgs/hours.jpg) cover no-repeat;
-    background-size: cover;
   }
 }
 
