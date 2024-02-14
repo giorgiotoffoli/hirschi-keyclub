@@ -449,10 +449,41 @@ video {
   opacity: 1;
 }
 
+/* For Mobile */
+
 @media (hover: none) {
   .container .card .content {
     transform: translateY(0px);
     opacity: 1;
+  }
+
+  .container .card:nth-child(1) {
+    background-image: url(imgs/daniel.jpeg);
+    filter: grayscale(100);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: difference;
+    position: relative;
+  }
+
+  .container .card:nth-child(2) {
+    background-image: url(imgs/gio.jpeg);
+    filter: grayscale(100);
+    background-repeat: no-repeat;
+    background-position: -10px;
+    background-size: cover;
+    background-blend-mode: difference;
+    position: relative;
+  }
+  .container .card:nth-child(3) {
+    background-image: url(imgs/nmeso.jpeg);
+    filter: grayscale(100);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: difference;
+    position: relative;
   }
 }
 
