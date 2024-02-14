@@ -148,20 +148,29 @@ video {
 }
 
 .photos img {
-  border-radius: 100%;
   position: absolute;
+  border-radius: 50%;
+  filter: grayscale(100);
+  transition: 0.25s;
   width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.photos img:hover {
+  filter: none;
+  cursor: pointer;
 }
 
 .photos img:nth-child(1) {
   margin-left: 70%;
-  bottom: -17.5vh;
+  bottom: -30.5vh;
+  z-index: 9999;
 }
 
 .photos img:nth-child(2) {
   margin-left: 60%;
-  bottom: 30px;
-  width: 300px;
+  bottom: 30%;
 }
 
 @media (max-width: 767px) {
@@ -170,7 +179,7 @@ video {
     margin-left: 70%;
   }
   .photos img:nth-child(2) {
-    bottom: 300px;
+    bottom: 200px;
     margin-left: 75%;
     width: 200px;
   }
@@ -219,7 +228,7 @@ video {
 .section-3 {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.7)
@@ -231,7 +240,7 @@ video {
   -o-background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  position: relative;
+  position: relative; */
 }
 
 @media (hover: hover) {
@@ -297,7 +306,6 @@ video {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: bolder;
-  text-decoration: underline white 3px;
 }
 
 .white-wave {
@@ -374,15 +382,29 @@ video {
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+
+.container .card:hover {
+  cursor: pointer;
+}
+
+.container .card:nth-child(1):hover {
+  background-image: url(imgs/daniel.jpeg);
+  filter: grayscale(100);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: difference;
+  position: relative;
 }
 
 .container .card:nth-child(2) {
@@ -393,6 +415,25 @@ video {
 .container .card:nth-child(3) {
   width: 200px;
   height: 350px;
+}
+
+.container .card:nth-child(2):hover {
+  background-image: url(imgs/gio.jpeg);
+  filter: grayscale(100);
+  background-repeat: no-repeat;
+  background-position: -10px;
+  background-size: cover;
+  background-blend-mode: difference;
+  position: relative;
+}
+.container .card:nth-child(3):hover {
+  background-image: url(imgs/nmeso.jpeg);
+  filter: grayscale(100);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: difference;
+  position: relative;
 }
 
 .container .card .content {
@@ -420,14 +461,20 @@ video {
   top: -200px;
   right: -50px;
   font-size: 8em;
-  color: rgba(0, 0, 0, 0.563);
+  color: rgb(255, 255, 255);
   pointer-events: none;
   font-family: "Playfair Display", serif;
 }
 
+#card3-number {
+  position: absolute;
+  top: -180px;
+  right: 20px;
+}
+
 .container .card .content h3 {
   font-size: 1em;
-  color: black;
+  color: rgb(255, 255, 255);
   z-index: 1;
   font-family: "Montserrat", sans-serif;
 }
